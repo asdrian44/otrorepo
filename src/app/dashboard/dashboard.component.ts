@@ -87,6 +87,10 @@ export class DashboardComponent implements OnInit {
             localStorage.setItem('rol', String(value.rol));
             // @ts-ignore
             localStorage.setItem('id', String(value.idalmacen));
+            // @ts-ignore
+            localStorage.setItem('almacen',String(value.almacen));
+            // @ts-ignore
+            localStorage.setItem('cargo',String(value.cargo));
         })
         this.DataCards();
         const dataDailySalesChart: any = {
