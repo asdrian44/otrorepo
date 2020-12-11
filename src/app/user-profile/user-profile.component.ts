@@ -9,7 +9,9 @@ import {UserProfile} from '../model/UserProfile';
 })
 export class UserProfileComponent implements OnInit {
 
-
+    cargo;
+    almacen;
+    
     private user: UserProfile;
 
     constructor(private auth: ServiceOAuthService) {
@@ -17,6 +19,8 @@ export class UserProfileComponent implements OnInit {
 
     ngOnInit() {
 
+        this.cargo = localStorage.getItem('cargo');
+        this.almacen = localStorage.getItem('almacen');
         this.user = this.auth.getData();
     }
 
